@@ -1,0 +1,27 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+body{
+  background-color: #7C444F;
+  background-image: url('./anders-jilden-AkUR27wtaxs-unsplash.jpg');
+  color: white;
+  background-size: cover; /* Cover the full area */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+main{
+  padding-top: 50px;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+
+}
+
+
