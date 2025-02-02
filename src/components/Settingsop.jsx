@@ -9,8 +9,11 @@ const Settingsop = () => {
   return (
     <>
     <div className='text-left '> 
-      <h1 className='font-bold text-8xl'> Setting </h1>
-      <label className='block mb-20 mt-20'><Slid/> </label>
+    <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center sm:text-left whitespace-nowrap">
+  Set your plan!
+</h1>
+
+      <label className='block mb-20 mt-14'><Slid/> </label>
       
       <label className='block '><BreakSlider/> </label>
       

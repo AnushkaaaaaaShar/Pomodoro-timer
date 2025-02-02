@@ -68,7 +68,7 @@ const Clock = () => {
   return (
     
     <>
-    <div>
+    <div className='w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto'>
     
      <CircularProgressbar value={Percentage} text={minutes + ':'+ Seconds} styles={buildStyles({
     // Colors
@@ -79,7 +79,7 @@ const Clock = () => {
   })}
   />   
     </div >
-    <div className='flex-row w-[100%] mt-4' >
+    <div className='flex flex-col sm:flex-row items-center justify-center mt-4' >
    {isPaused 
    ?  <Playbtn onClick={()=> {setisPaused(false); isPausedRef.current = false;}} /> 
    : <Pausebtn onClick={()=> {setisPaused(true); isPausedRef.current = true;}} />
@@ -87,7 +87,7 @@ const Clock = () => {
     
       </div>
 
-      <div className='mt-4'> 
+      <div className='mt-4 '> 
          <Setbtn onClick={() => SettingsInfo.setshowSettings(true)} /> 
 
 

@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-const Backbtn = ({onClick}) => {
+const Backbtn = ({ onClick }) => {
   return (
-    <button onClick={onClick} className='type="button" mr-16 mt-16 w-[50%] text-white bg-pink-950 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-500 font-medium rounded-full text-sm px-5 py-3 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-'> Back
+    <button
+      type="button"
+      onClick={onClick}
+      className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 text-white bg-pink-950 hover:bg-gray-900 
+        focus:outline-none focus:ring-4 focus:ring-gray-500 font-medium rounded-full 
+        text-sm px-5 py-3 sm:mt-16 mb-2 mt-2 transition-all duration-300"
+    >
+      Back
     </button>
-  )
-}
+  );
+};
 
-export default Backbtn
+export default Backbtn;
+

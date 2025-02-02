@@ -14,13 +14,18 @@ export default function BreakSlider() {
   return (
     <Box
       sx={{
-        width: 320,
+        width: "90%", // Makes it responsive
+        maxWidth: 400, // Limits max size for large screens
         textAlign: "center",
-        mt: 2,
-        p: 3,
+        mt: { xs: 1, sm: 2 }, // Adjusts margin for different screens
+        p: { xs: 2, sm: 3 }, // Adjusts padding for better spacing
         bgcolor: "#441752",
         borderRadius: "10px",
         boxShadow: "0px 4px 10px rgba(51, 153, 255, 0.4)",
+        mx: "auto", // Centers the component
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       <Typography
@@ -30,6 +35,7 @@ export default function BreakSlider() {
           fontWeight: "bold",
           color: "#3399FF",
           textTransform: "uppercase",
+          fontSize: { xs: "1rem", sm: "1.25rem" },
         }}
       >
         ☕ Break Time

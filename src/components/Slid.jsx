@@ -12,8 +12,19 @@ const marks = [
 export default function Slid() {
   const SettingsInfo = useContext(SettingsContext);
   return (
-    <Box sx={{ width: 320, textAlign: "center", mt: 2 }}>
-      <Typography variant="h6" sx={{ mb: 2, fontWeight: "bold" }}>
+    <Box sx={{ width: "90%", // Makes it responsive
+      maxWidth: 400, // Limits max size
+      textAlign: "center",
+      mt: 2,
+      mx: "auto", // Centers the box horizontally
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center", }}>
+      <Typography variant="h6" sx={{ 
+         mb: 2, 
+         fontWeight: "bold",
+         fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } 
+       }}>
         ⏳ Work Minutes
       </Typography>
       <Slider
