@@ -9,7 +9,7 @@ A simple and customizable **Pomodoro Timer** built with **React.js** and **Vite*
 - Responsive and user-friendly interface
 
 ## 🖥️ Live Demo
-[🔗 Click here to view the live demo](#) *(Add link when deployed)*
+[🔗 https://evolve-pomodoro-timer.vercel.app/
 
 ## 🛠️ Tech Stack
 - **Frontend:** React.js, Vite, Material-UI
