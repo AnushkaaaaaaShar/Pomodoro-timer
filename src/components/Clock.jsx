@@ -6,6 +6,7 @@ import Pausebtn from './Pausebtn';
 import Setbtn from './Setbtn';
 import { useContext, useState, useEffect, useRef} from 'react';
 import SettingsContext from './SettingsContext';
+import Reset from './Reset';
 
 const Clock = () => {
   const SettingsInfo = useContext(SettingsContext);
@@ -38,6 +39,26 @@ const Clock = () => {
     SecondsLeftRef.current = initialTime;
   }
 
+  const playsound = () => {
+    const audio = new Audio("/audio.wav"); // File in public folder
+    audio.play();
+
+    setTimeout(() => {
+      audio.pause();
+      audio.currentTime = 0; // Reset to the beginning
+    }, 5000);
+  };
+
+  function resetTimer() {
+    const initialTime = mode === "work" 
+      ? SettingsInfo.WorkMinutes * 60 
+      : SettingsInfo.BreakMinutes * 60;
+  
+    setSecondsLeft(initialTime); 
+    SecondsLeftRef.current = initialTime;
+  }
+  
+
   useEffect(()=>{
     initTimer();
     const interval =  setInterval(()=> {
@@ -46,6 +67,7 @@ const Clock = () => {
         return;
       }
       if(SecondsLeftRef.current === 0){
+        playsound();
         return SwitchMode();
       }
 
@@ -84,6 +106,7 @@ const Clock = () => {
    ?  <Playbtn onClick={()=> {setisPaused(false); isPausedRef.current = false;}} /> 
    : <Pausebtn onClick={()=> {setisPaused(true); isPausedRef.current = true;}} />
    }
+   <Reset  onClick={resetTimer}/>
     
       </div>
 
